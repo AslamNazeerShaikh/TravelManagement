@@ -5,27 +5,32 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2CAAD981-52EE-4AAC-84C0-A0AACFDB41A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Presentation", "src\TravelManagement.Presentation\TravelManagement.Presentation.csproj", "{BC6F0B4F-906E-429A-A0AF-30994816A145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Presentation", "src\TravelManagement.Presentation\TravelManagement.Presentation.csproj", "{BC6F0B4F-906E-429A-A0AF-30994816A145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Application", "src\TravelManagement.Application\TravelManagement.Application.csproj", "{0063A70A-A80A-4CFC-8135-1DB33764D37F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Application", "src\TravelManagement.Application\TravelManagement.Application.csproj", "{0063A70A-A80A-4CFC-8135-1DB33764D37F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Domain", "src\TravelManagement.Domain\TravelManagement.Domain.csproj", "{FD94F6F7-B000-4BFB-B33A-B472616731E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Domain", "src\TravelManagement.Domain\TravelManagement.Domain.csproj", "{FD94F6F7-B000-4BFB-B33A-B472616731E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Infrastructure", "src\TravelManagement.Infrastructure\TravelManagement.Infrastructure.csproj", "{834F2EF3-B99F-4520-902D-B07FD1B3DB2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Infrastructure", "src\TravelManagement.Infrastructure\TravelManagement.Infrastructure.csproj", "{834F2EF3-B99F-4520-902D-B07FD1B3DB2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Persistence", "src\TravelManagement.Persistence\TravelManagement.Persistence.csproj", "{830B176C-7C7D-4B32-AF99-A90B010EAD9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Persistence", "src\TravelManagement.Persistence\TravelManagement.Persistence.csproj", "{830B176C-7C7D-4B32-AF99-A90B010EAD9F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E90D78FE-F60E-46F8-A423-A0988EE2FFF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelManagement.Tests", "tests\TravelManagement.Tests\TravelManagement.Tests.csproj", "{6ED33BDA-71D9-417D-B007-E35ADA691CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelManagement.Tests", "tests\TravelManagement.Tests\TravelManagement.Tests.csproj", "{6ED33BDA-71D9-417D-B007-E35ADA691CEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF560C3D-3F3C-4B54-A889-214E95F3CB68}"
+	ProjectSection(SolutionItems) = preProject
+		solution items\.gitattributes = solution items\.gitattributes
+		solution items\.gitignore = solution items\.gitignore
+		solution items\LICENSE.txt = solution items\LICENSE.txt
+		solution items\README.md = solution items\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BC6F0B4F-906E-429A-A0AF-30994816A145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -52,6 +57,9 @@ Global
 		{6ED33BDA-71D9-417D-B007-E35ADA691CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ED33BDA-71D9-417D-B007-E35ADA691CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ED33BDA-71D9-417D-B007-E35ADA691CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BC6F0B4F-906E-429A-A0AF-30994816A145} = {2CAAD981-52EE-4AAC-84C0-A0AACFDB41A2}
