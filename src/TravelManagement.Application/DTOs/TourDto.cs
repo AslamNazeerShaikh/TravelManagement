@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TravelManagement.Domain.Entities
+namespace TravelManagement.Application.Dtos
 {
-    public class Tour
+    public class TourDto
     {
         public int Id { get; set; }
         public string? Name { get; set; } = string.Empty;
