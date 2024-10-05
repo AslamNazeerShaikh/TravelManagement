@@ -1,4 +1,4 @@
-namespace TravelManagement.Tests;
+namespace TravelManagement.Infrastructure.Tests;
 
 public class UnitTest1
 {
