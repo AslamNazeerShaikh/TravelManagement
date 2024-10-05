@@ -1,0 +1,12 @@
+# For all markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# For all HTML files
+[*.html]
+indent_style = space
+indent_size = 4
+
+# For all text files
+[*.txt]
+charset = utf-8

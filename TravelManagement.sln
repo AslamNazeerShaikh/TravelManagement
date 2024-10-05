@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E90D78FE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF560C3D-3F3C-4B54-A889-214E95F3CB68}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		solution items\.gitattributes = solution items\.gitattributes
 		solution items\.gitignore = solution items\.gitignore
 		solution items\File Structure.txt = solution items\File Structure.txt
