@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using TravelManagement.Domain.Entities;
+using TravelManagement.Persistence.Data.Contexts;
 
 namespace TravelManagement.Application.Queries.Tours.Handlers
 {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MediatR;
 using TravelManagement.Domain.Entities;
+using TravelManagement.Persistence.Data.Contexts;
 
 namespace TravelManagement.Application.Commands.Tours.Handlers
 {
@@ -18,8 +19,20 @@ namespace TravelManagement.Application.Commands.Tours.Handlers
             _context = context;
         }
 
-        public async Task<Tour> Handle(AddTourCommand request, CancellationToken cancellationToken)
+        public async Task<Tour> Handle(AddTourCommand? request, CancellationToken cancellationToken)
         {
+            if (request == null)
+            {
+                throw new ArgumentNullException(nameof(request), "AddTourCommand cannot be null.");
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Name) ||
+                string.IsNullOrWhiteSpace(request.FromLocation) ||
+                string.IsNullOrWhiteSpace(request.ToLocation))
+            {
+                throw new ArgumentException("Command contains invalid or missing data.");
+            }
+
             var tour = new Tour
             {
                 Name = request.Name,
