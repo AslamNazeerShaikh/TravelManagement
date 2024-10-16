@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Tours\Handlers\" />
-    <Folder Include="Queries\Tours\Handlers\" />
+    <ProjectReference Include="..\TravelManagement.Domain\TravelManagement.Domain.csproj" />
   </ItemGroup>
 
 </Project>
