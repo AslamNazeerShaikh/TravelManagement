@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using TravelManagement.Persistence.Data.Contexts;
+using TravelManagement.Application.Interfaces.Repositories;
+using TravelManagement.Persistence.Contexts;
+using TravelManagement.Persistence.Repositories;
 
 namespace TravelManagement.Presentation;
 
@@ -9,13 +11,23 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
+        // Add Services to the Container.
         builder.Services.AddControllersWithViews();
 
-        // Register DbContext with dependency injection
+        // Register DbContext with SQLite
         builder.Services.AddDbContext<TravelDbContext>(options =>
         {
             options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+        });
+
+        // Register the generic repository for dependency injection
+        builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+        // Add MediatR, other services, etc.
+        builder.Services.AddMediatR(configuration =>
+        {
+            configuration.RegisterServicesFromAssembly(typeof(Program).Assembly);
         });
 
         var app = builder.Build();
@@ -24,7 +36,7 @@ public class Program
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
-            
+
             app.UseHsts();
         }
 

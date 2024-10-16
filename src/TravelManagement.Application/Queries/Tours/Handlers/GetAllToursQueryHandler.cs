@@ -5,24 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
-using Microsoft.EntityFrameworkCore;
+using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Domain.Entities;
-using TravelManagement.Persistence.Data.Contexts;
 
 namespace TravelManagement.Application.Queries.Tours.Handlers
 {
     public class GetAllToursQueryHandler : IRequestHandler<GetAllToursQuery, IEnumerable<Tour>>
     {
-        private readonly TravelDbContext _context;
+        private readonly IGenericRepository<Tour> _tourRepository;
 
-        public GetAllToursQueryHandler(TravelDbContext context)
+        public GetAllToursQueryHandler(IGenericRepository<Tour> context)
         {
-            _context = context;
+            _tourRepository = context;
         }
 
         public async Task<IEnumerable<Tour>> Handle(GetAllToursQuery request, CancellationToken cancellationToken)
         {
-            return await _context.Tours.ToListAsync(cancellationToken);
+            return await _tourRepository.GetAllAsync(cancellationToken);
         }
     }
 }

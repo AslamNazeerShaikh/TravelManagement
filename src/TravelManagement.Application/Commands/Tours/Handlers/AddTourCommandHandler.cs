@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MediatR;
+using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Domain.Entities;
-using TravelManagement.Persistence.Data.Contexts;
 
 namespace TravelManagement.Application.Commands.Tours.Handlers
 {
     public class AddTourCommandHandler : IRequestHandler<AddTourCommand, Tour>
     {
-        private readonly TravelDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public AddTourCommandHandler(TravelDbContext context)
+        public AddTourCommandHandler(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<Tour> Handle(AddTourCommand? request, CancellationToken cancellationToken)
@@ -43,8 +43,8 @@ namespace TravelManagement.Application.Commands.Tours.Handlers
                 Price = request.Price
             };
 
-            _context.Tours.Add(tour);
-            await _context.SaveChangesAsync(cancellationToken);
+            await _unitOfWork.Context.Tours.AddAsync(tour, cancellationToken);
+            // await _tourRepository.(cancellationToken);
             return tour;
         }
     }

@@ -12,7 +12,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\TravelManagement.Domain\TravelManagement.Domain.csproj" />
-		<ProjectReference Include="..\TravelManagement.Persistence\TravelManagement.Persistence.csproj" />
 	</ItemGroup>
 
 </Project>

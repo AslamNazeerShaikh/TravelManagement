@@ -7,12 +7,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Folder Include="Data\Database\" />
+		<Folder Include="Database\" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\TravelManagement.Application\TravelManagement.Application.csproj" />
 		<ProjectReference Include="..\TravelManagement.Domain\TravelManagement.Domain.csproj" />
-		<ProjectReference Include="..\TravelManagement.Infrastructure\TravelManagement.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
 	</ItemGroup>
 
 </Project>
