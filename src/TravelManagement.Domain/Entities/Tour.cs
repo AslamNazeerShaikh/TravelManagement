@@ -17,9 +17,11 @@ namespace TravelManagement.Domain.Entities
         public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "From Location is required.")]
+        [StringLength(100, ErrorMessage = "Location should be a maximum of 100 characters.")]
         public string FromLocation { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "To Location is required.")]
+        [StringLength(100, ErrorMessage = "Location should be a maximum of 100 characters.")]
         public string ToLocation { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Start Date is required.")]
