@@ -5,13 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using TravelManagement.Domain.Common;
+
 namespace TravelManagement.Domain.Entities
 {
-    public class Tour
+    public class Tour : BaseAuditableEntity
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "Tour Name is required.")]
         [StringLength(100, ErrorMessage = "Name should be a maximum of 100 characters.")]
         public string? Name { get; set; } = string.Empty;
