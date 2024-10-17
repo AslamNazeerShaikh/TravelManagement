@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Persistence.Contexts;
 using TravelManagement.Persistence.Repositories;
@@ -28,7 +27,7 @@ public class Program
         // Add MediatR, other services, etc.
         builder.Services.AddMediatR(configuration =>
         {
-            configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+            configuration.RegisterServicesFromAssembly(typeof(Program).Assembly);
         });
 
         var app = builder.Build();

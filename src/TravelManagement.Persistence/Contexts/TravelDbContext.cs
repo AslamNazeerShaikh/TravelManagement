@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
 using TravelManagement.Domain.Entities;
-using TravelManagement.Domain.Interfaces;
 
 namespace TravelManagement.Persistence.Contexts
 {
