@@ -14,8 +14,4 @@
 		<ProjectReference Include="..\TravelManagement.Domain\TravelManagement.Domain.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="DTOs\Tours\" />
-	</ItemGroup>
-
 </Project>
