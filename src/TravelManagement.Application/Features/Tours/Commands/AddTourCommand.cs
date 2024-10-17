@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MediatR;
 using TravelManagement.Domain.Entities;
 
-namespace TravelManagement.Application.Commands.Tours
+namespace TravelManagement.Application.Features.Tours.Commands
 {
     public class AddTourCommand : IRequest<Tour>
     {

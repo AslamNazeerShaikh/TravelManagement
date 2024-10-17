@@ -8,7 +8,7 @@ using MediatR;
 using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Domain.Entities;
 
-namespace TravelManagement.Application.Queries.Tours.Handlers
+namespace TravelManagement.Application.Features.Tours.Queries.Handlers
 {
     public class GetAllToursQueryHandler : IRequestHandler<GetAllToursQuery, IEnumerable<Tour>>
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MediatR;
 using TravelManagement.Domain.Entities;
 
-namespace TravelManagement.Application.Queries.Tours
+namespace TravelManagement.Application.Features.Tours.Queries
 {
     public class GetAllToursQuery : IRequest<IEnumerable<Tour>>
     {

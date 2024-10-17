@@ -8,7 +8,7 @@ using MediatR;
 using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Domain.Entities;
 
-namespace TravelManagement.Application.Commands.Tours.Handlers
+namespace TravelManagement.Application.Features.Tours.Commands.Handlers
 {
     public class AddTourCommandHandler : IRequestHandler<AddTourCommand, Tour>
     {
@@ -43,7 +43,7 @@ namespace TravelManagement.Application.Commands.Tours.Handlers
                 Price = request.Price
             };
 
-            await _unitOfWork.Context.Tours.AddAsync(tour, cancellationToken);
+            // await _unitOfWork.Context.Tours.AddAsync(tour, cancellationToken);
             // await _tourRepository.(cancellationToken);
             return tour;
         }

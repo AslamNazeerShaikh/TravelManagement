@@ -11,7 +11,7 @@ using TravelManagement.Domain.Interfaces;
 
 namespace TravelManagement.Persistence.Contexts
 {
-    public class TravelDbContext : DbContext, IDbContext
+    public class TravelDbContext : DbContext
     {
         public TravelDbContext(DbContextOptions<TravelDbContext> options) : base(options) { }
 
@@ -20,11 +20,6 @@ namespace TravelManagement.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-        }
-
-        public new async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
-        {
-            return await base.SaveChangesAsync(cancellationToken);
         }
     }
 }
