@@ -1,1 +1,6 @@
-# TravelManagement
+<h1 align="center">Travel Management</h1>
+<p align="center">This repository hosts an <strong>ASP.NET Core 8 MVC</strong> Web Application that implements the <strong>MediatR</strong> library and <strong>CQRS (Command Query Responsibility Segregation)</strong> design pattern, ensuring a clear separation of command and query operations. On the command side, the project leverages both the <strong>Generic Repository</strong> and <strong>Unit of Work</strong> design patterns to manage data access and transactions efficiently. The application is built following <strong>Domain-Driven Design (DDD)</strong> and adheres to <strong>Clean Architecture</strong> principles, ensuring scalability, testability, and maintainability. Additionally, the project strictly follows <strong>SOLID design principles</strong>, ensuring modular, robust, and clean code architecture for effective software development.</p>
+
+<img src="https://github.com/AslamNazeerShaikh/TravelManagement/blob/development/doc/images/1.%20Clean%20Architecture.png" width=100% height=100%>
+<img src="https://github.com/AslamNazeerShaikh/TravelManagement/blob/development/doc/images/3.%20CQRS%20Pattern.jpg" width=100% height=100%>
+<img src="https://github.com/AslamNazeerShaikh/TravelManagement/blob/development/doc/images/2.%20Clean%20Architecture%20Domain%20Layer.png" width=100% height=100%>
