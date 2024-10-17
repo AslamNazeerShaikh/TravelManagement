@@ -12,13 +12,17 @@ namespace TravelManagement.Persistence.Contexts
 {
     public class TravelDbContext : DbContext
     {
-        public TravelDbContext(DbContextOptions<TravelDbContext> options) : base(options) { }
+        public TravelDbContext(DbContextOptions<TravelDbContext> options) : base(options)
+        {
+        }
 
+        // DbSets for your entities
         public DbSet<Tour> Tours { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            // Add custom configurations here
         }
     }
 }

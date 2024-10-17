@@ -22,7 +22,7 @@ public class Program
 
         // Register the generic repository for dependency injection
         builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+        builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
         // Add MediatR, other services, etc.
         builder.Services.AddMediatR(configuration =>

@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Microsoft.EntityFrameworkCore;
 using TravelManagement.Application.Interfaces.Repositories;
 using TravelManagement.Domain.Common;
+using TravelManagement.Persistence.Contexts;
 
 namespace TravelManagement.Persistence.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly DbContext _dbContext;
+        private readonly TravelDbContext _dbContext;
         private readonly ConcurrentDictionary<string, object> _repositories = new();
         private bool _disposed;
 
         // Constructor to inject DbContext
-        public UnitOfWork(DbContext dbContext)
+        public UnitOfWork(TravelDbContext dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
