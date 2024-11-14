@@ -8,16 +8,5 @@ namespace TravelManagement.Application.DTOs.Tours
 {
     public record TourDto
     {
-        Id                
-        Name
-        FromLocation
-        ToLocation 
-        StartDate
-        EndDate
-        Price 
-        CreatedBy 
-        CreatedDate 
-        UpdatedBy 
-        UpdatedDate 
-}
+    }
 }
